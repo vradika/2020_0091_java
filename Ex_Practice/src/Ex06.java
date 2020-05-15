@@ -33,7 +33,12 @@ public class Ex06 {
 			hak = "F학점";
 		}
 		System.out.println("학점 >> " + hak);
-	}
-	
-
+		switch (hak) {
+		case "A학점": 
+		case "B학점": hak = "Eexellent"; break;
+		case "C학점": hak = "Good"; break;
+		case "D학점": hak = "Poor";
+		}
+		System.out.println("평가 >> " + hak);
+	}	
 }
