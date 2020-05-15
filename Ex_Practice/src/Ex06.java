@@ -11,6 +11,7 @@ public class Ex06 {
 		int kor, eng, math, sports;
 		int sum;
 		double avg;
+		String hak;
 		
 			System.out.print("이름은 >> "); name = br.readLine();
 			System.out.print("국어 >> "); 	kor = Integer.parseInt(br.readLine());
@@ -19,9 +20,20 @@ public class Ex06 {
 			System.out.print("체육 >> ");	sports = Integer.parseInt(br.readLine());
 			
 		sum = kor + eng + math + sports;
-		System.out.print("총 점수 >> " + sum);
+		System.out.println("총 점수 >> " + sum);
 		avg = (int)(sum /3.0*10)/10.0;
 		System.out.println("평균 >> " + avg);
+		if (avg >= 90) {
+			hak = "A학점";
+		} else if (avg >= 80) {
+			hak = "B학점";
+		} else if (avg >= 70) {
+			hak = "C학점";
+		} else {
+			hak = "F학점";
+		}
+		System.out.println("학점 >> " + hak);
 	}
+	
 
 }
