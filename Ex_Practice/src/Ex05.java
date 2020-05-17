@@ -61,7 +61,7 @@ public class Ex05 {
 			System.out.print(sum[i] + "\t");
 			System.out.print(avg[i] + "\t");
 			System.out.print(hak[i] + "\t");
-			System.out.print(rank[i] + "\t");
+			System.out.println(rank[i] + "\t");
 		i++;
 		}
 	}
