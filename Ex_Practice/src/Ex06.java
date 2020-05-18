@@ -6,22 +6,24 @@ public class Ex06 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
+
 		String name;
 		int kor, eng, math, sports;
 		int sum;
 		double avg;
 		String hak;
-		
-			System.out.print("이름은 >> "); name = br.readLine();
-			System.out.print("국어 >> "); 	kor = Integer.parseInt(br.readLine());
-			System.out.print("영어 >> "); 	eng = Integer.parseInt(br.readLine());
-			System.out.print("수학 >> " );  math = Integer.parseInt(br.readLine());
-			System.out.print("체육 >> ");	sports = Integer.parseInt(br.readLine());
-			
+
+		System.out.print("이름은 >> "); name = br.readLine();
+		System.out.print("국어 >> "); 	kor = Integer.parseInt(br.readLine());
+		System.out.print("영어 >> ");	eng = Integer.parseInt(br.readLine());
+		System.out.print("수학 >> ");	math = Integer.parseInt(br.readLine());
+		System.out.print("체육 >> ");	sports = Integer.parseInt(br.readLine());
+		// 총점
 		sum = kor + eng + math + sports;
-		System.out.println("총 점수 >> " + sum);
-		avg = (int)(sum /3.0*10)/10.0;
+		System.out.println("총점 >> " + sum);
+		// 평균
+		avg = (int) (sum / 4.0 * 10) / 10.0;
+		// 학점
 		System.out.println("평균 >> " + avg);
 		if (avg >= 90) {
 			hak = "A학점";
@@ -33,12 +35,18 @@ public class Ex06 {
 			hak = "F학점";
 		}
 		System.out.println("학점 >> " + hak);
+		// 평가
 		switch (hak) {
-		case "A학점": 
-		case "B학점": hak = "Eexellent"; break;
-		case "C학점": hak = "Good"; break;
-		case "D학점": hak = "Poor";
+		case "A학점":
+		case "B학점":
+			hak = "Eexellent!!!";
+			break;
+		case "C학점":
+			hak = "Good!!";
+			break;
+		case "D학점":
+			hak = "Poor!";
 		}
 		System.out.println("평가 >> " + hak);
-	}	
+	}
 }
