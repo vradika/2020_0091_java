@@ -1,4 +1,4 @@
-package com.ict.edu3;
+package com.ict.edu6;
 
 public class Teacher extends Person {
 	private String Subject;
@@ -16,8 +16,8 @@ public class Teacher extends Person {
 		Subject = subject;
 	}
 	
+	@Override
 	public void print() {
-		super.print();
-		System.out.println(", 과목: " + Subject);
+		System.out.println("이름: " + getName() + ",\t" + "나이: " + getAge() + ",\t" +"과목: " + Subject);
 	}
 }
