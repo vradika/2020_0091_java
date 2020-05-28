@@ -1,0 +1,6 @@
+﻿http://www.kma.go.kr/XML/weather/sfc_web_map.xml
+
+http://openapi.seoul.go.kr:8088/sample/json/SeoulLibraryTime/1/5/
+
+공공데이터 제공하는 사이트 : https://www.data.go.kr
+

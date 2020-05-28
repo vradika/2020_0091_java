@@ -9,7 +9,7 @@ public class Ex02 {
 		int money = 0;
 		
 		if (work > 8) {
-			money = (int) ((8 * dan) + (work - 8) * dan * 1.5); 
+			money = (int) ((8 * dan) + ((work - 8) * dan * 1.5)); 
 		} else {
 			money = 8 * dan;
 		}

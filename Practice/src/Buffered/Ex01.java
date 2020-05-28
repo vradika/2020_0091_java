@@ -7,48 +7,93 @@ import java.io.FileWriter;
 import java.util.Date;
 
 public class Ex01 {
-	public static void main(String[] args) {
-		FileReader fr = null;
-		FileWriter fw = null;
-		
-		BufferedReader br = null;
-		BufferedWriter bw = null;
-		
-		Date d = null;
-		
-		try {
-			// "ReadFile.txt" 파일을 읽는 FileReader 객체 생성
-			// BufferedReader 객체 생성
-			fr = new FileReader("ReadFile.txt");
-			br = new BufferedReader(fr);
-			
-			// FileWriter로 파일 "CopyFile.txt"에 출력한다. 기존 파일에 덮어쓴다.
-			// BufferedWriter 객체 생성
-			fw = new FileWriter("CopyFile.txt", false);
-			bw = new BufferedWriter(fw);
-			
-			String s = null;
-			d = new Date();
-			long end = d.getTime();
-			
-			// 파일 복사 시작 시간
-			long start = d.getTime();
-			
-			while ((s=br.readLine()) != null) {
-				bw.write(s);
-				bw.newLine();
-				
-				System.out.println("복사 시간 : " + (end - start));
-				
-			}
-			
-		} catch (Exception e) {
-			
-		} finally {
-			if (br != null) try { br.close(); } catch (Exception e2) {	}	
-			if (fr != null) try { fr.close(); } catch (Exception e3) {	}
-			if (bw != null) try { bw.close(); } catch (Exception e2) {  }
-			if (fw != null)	try { fw.close(); } catch (Exception e2) { 	}
-		}
+	
+	private String name, hak;
+	private int kor, eng, math, sports, sum;
+	private int rank = 1;
+	
+	public int getRank() {
+		return rank;
 	}
+
+	public void setRank(int rank) {
+		this.rank = rank;
+	}
+	private double avg;
+	
+	public void s_sum(int kor, int eng, int  math, int sports) {
+		sum = kor + eng + math + sports;
+		s_avg();
+	}
+	
+	public void s_avg() {
+		avg = (int)(sum / 4.0 * 10) / 10.0;
+		s_hak();
+	}
+	
+	public void s_hak() {
+		if (avg >= 90) {
+			hak = "A학점";
+		} else if (avg >= 80) {
+			hak = "B학점";
+		} else if (avg >=70) {
+			hak = "C학점";
+		} else {
+			hak = "F학점";
+		} 
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getHak() {
+		return hak;
+	}
+	public void setHak(String hak) {
+		this.hak = hak;
+	}
+	public int getKor() {
+		return kor;
+	}
+	public void setKor(int kor) {
+		this.kor = kor;
+	}
+	public int getEng() {
+		return eng;
+	}
+	public void setEng(int eng) {
+		this.eng = eng;
+	}
+	public int getMath() {
+		return math;
+	}
+	public void setMath(int math) {
+		this.math = math;
+	}
+	public int getSports() {
+		return sports;
+	}
+	public void setSports(int sports) {
+		this.sports = sports;
+	}
+	public double getAvg() {
+		return avg;
+	}
+	public void setAvg(double avg) {
+		this.avg = avg;
+	}
+
+	public int getSum() {
+		return sum;
+	}
+
+	public void setSum(int sum) {
+		this.sum = sum;
+	}
+	
+	
+
 }
