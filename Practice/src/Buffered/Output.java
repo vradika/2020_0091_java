@@ -47,6 +47,7 @@ public class Output {
 			}
 			oos.writeObject(list);
 			oos.flush();
+			
 		} catch (Exception e) {
 		} finally {
 			try {
